@@ -9,7 +9,7 @@
   <meta name="viewport"           content="width=device-width, initial-scale=1.0">
   <title>Cutters Choice Radio</title>
   
-  <!-- Main stylesheet (bump v= to bust cache) -->
+  <!-- Main stylesheet (keep for other page styles) -->
   <link rel="stylesheet" href="style.css?v=1748691419259">
 
   <!-- Bebas Neue & FontAwesome -->
@@ -17,38 +17,46 @@
   <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <!-- INLINE NAV STYLING -->
+  <!-- INLINE NAV STYLING (retain teal background for nav titles) -->
   <style>
-    :root { --brand-teal: #5A8785; }
-
-    /* ─── NAV ───────────────────────────────────────────────────────── */
-   <style>
-  :root { --brand-teal: #5A8785; }
-
-  /* ─── NAV ───────────────────────────────────────────────────────── */
-  #main-nav {
-    display: flex !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-    width: 99.8% !important;
-    padding: 0.25rem 0.75rem !important;
-    margin: 0 !important;
-    box-sizing: border-box 
-
-      /* Solid teal background */
-      background-color: var(--brand-teal) !important;
-      /* Sit on top of underlying content */
-      position: relative;
-      z-index: 1000;
-
-      /* Thin teal lines above and below the main teal bar */
-      border-top:    2px solid var(--brand-teal) !important;
-      border-bottom: 2px solid var(--brand-teal) !important;
+    :root {
+      --brand-teal: #5A8785;
     }
-    #main-nav .nav-item { flex: 1 !important; }
-    #main-nav .nav-left   { text-align: left !important; }
-    #main-nav .nav-center { text-align: center !important; }
-    #main-nav .nav-right  { text-align: right !important; }
+
+    /* ─── NAVIGATION BAR ───────────────────────────────────────────────────── */
+    #main-nav {
+      display: flex !important;
+      justify-content: space-between !important;
+      align-items: center !important;
+      width: 100% !important;
+      padding: 0.25rem 0.65rem !important;
+      margin: 0 !important;
+      box-sizing: border-box !important;
+
+      /* Solid teal background behind titles */
+      background-color: var(--brand-teal) !important;
+
+      /* Sit on top of underlying content */
+      position: relative !important;
+      z-index: 1000 !important;
+    }
+
+    #main-nav .nav-item {
+      flex: 1 !important;
+    }
+    #main-nav .nav-left {
+      text-align: left !important;
+    }
+    #main-nav .nav-center {
+      text-align: center !important;
+    }
+    #main-nav .nav-right {
+      display: flex !important;
+      justify-content: flex-end !important;
+      align-items: center !important;
+      text-align: right !important;
+      flex: 1 !important;
+    }
 
     #main-nav a {
       color: #fff !important;
@@ -62,15 +70,15 @@
       margin-left: 0.5rem !important;
       font-size: 1.2rem !important;
       vertical-align: middle !important;
+      color: #fff !important;
     }
 
-    /* ─── MOBILE OVERRIDE: horizontal nav, smaller fonts, remove icons, reduce height ─────────────────── */
+    /* ─── MOBILE OVERRIDE ─────────────────────────────────────────────────── */
     @media (max-width: 768px) {
       #main-nav {
         flex-direction: row !important;
         justify-content: space-between !important;
         flex-wrap: nowrap !important;
-        /* reduce vertical padding for mobile */
         padding: 0.115rem 0.5rem !important;
       }
       #main-nav .nav-item {
@@ -130,6 +138,9 @@
     </div>
   </header>
 
+  <!-- ─── THIN TEAL LINE ABOVE NAV ─────────────────────────────────────────── -->
+  <div style="height: 2px; background-color: var(--brand-teal);"></div>
+
   <!-- ─── NAV ─────────────────────────────────────────────────────────────── -->
   <nav id="main-nav">
     <div class="nav-item nav-left">
@@ -148,6 +159,9 @@
       </a>
     </div>
   </nav>
+
+  <!-- ─── THIN TEAL LINE BELOW NAV ─────────────────────────────────────────── -->
+  <div style="height: 2px; background-color: var(--brand-teal);"></div>
 
   <!-- ─── MAIN GRID CONTENT ──────────────────────────────────────────────── -->
   <div class="grid-container">
